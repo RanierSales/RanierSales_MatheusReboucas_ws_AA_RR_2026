@@ -21,6 +21,17 @@ Conforme os cálculos detalhados em `docs/EquationSolution.pdf`, a função de c
 $$T(n) = 10.000n^2 - 50.000n$$
 Para valores de $n \ge 6$. Embora a complexidade assintótica seja **$O(n^2)$**, a constante massiva de 10.000 faz com que, em intervalos práticos, o algoritmo apresente uma inclinação de crescimento que se assemelha a funções de ordem superior em escalas log-log.
 
+## 📈 Resultados e Análise Visual
+
+Abaixo, apresentamos a comparação entre as escalas linear e log-log, evidenciando a forte diferença de performance entre o baseline (Busca Linear) e o algoritmo alvo.
+
+![Comparativo Escala Linear vs Log-Log](results/linear_vs_log_comparison.png)
+
+### Diagnóstico de Inclinação (Slope)
+Através da escala log-log, conseguimos identificar a inclinação da reta de crescimento. Embora a teoria aponte para $O(n^2)$, o experimento prático revelou uma inclinação próxima a **2.99** para o intervalo testado, indicando um comportamento momentaneamente cúbico devido ao peso das constantes e laços aninhados.
+
+![Diagnóstico de Inclinação](results/slope_diagnosis_analysis.png)
+
 ## 🚀 Como Rodar
 
 ### Pré-requisitos
