@@ -56,12 +56,12 @@ Metrics runExperiment(unsigned long long (*search_func)(double, double[], int), 
 int main() {
     srand(time(NULL));
 
-    FILE *csv_file = fopen("experiment_results.csv", "w");
+    FILE *csv_file = fopen("experiment_results.csv", "a");
     if (!csv_file) return 1;
 
     fprintf(csv_file, "algorithm,data_type,n,run_id,time_sec,inspections\n");
 
-    int sizes[] = {100, 300, 500, 700, 1000}; 
+    int sizes[] = {100, 300, 500, 700, 1000, 1500, 2000}; 
     int num_sizes = sizeof(sizes) / sizeof(sizes[0]);
     char *data_types[] = {"random", "asc", "desc"};
     int num_types = 3;
